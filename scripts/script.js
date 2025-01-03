@@ -89,7 +89,7 @@ noButton.onclick = function () {
       noModal.style.opacity = 0;
       hideElement(simButton)
       hideInitialMessage();
-      changeBgImageAndDisableEvents(noButton, "url('../assets/icons/palpatine.png')")
+      changeBgImageAndDisableEvents(noButton, "url('./assets/icons/palpatine.png')")
       typeWriter(noMessage, false);
    }, 5000);
 }
@@ -100,26 +100,26 @@ noButton.addEventListener('mouseover', function () {
    if (simButton.hidden) {
       return;
    }
-   simButton.style.backgroundImage = "url('../assets/icons/baby-yoda-nao-sorreiando.png')";
-   noButton.style.backgroundImage = "url('../assets/icons/palpatine.png')";
+   simButton.style.backgroundImage = "url('./assets/icons/baby-yoda-nao-sorreiando.png')";
+   noButton.style.backgroundImage = "url('./assets/icons/palpatine.png')";
 });
 
 noButton.addEventListener('mouseout', function () {
    if (simButton.hidden) {
-      noButton.style.backgroundImage = "url('../assets/icons/palpatine.png')";
+      noButton.style.backgroundImage = "url('./assets/icons/palpatine.png')";
       return;
    }
-   simButton.style.backgroundImage = "url('../assets/icons/baby-yoda-neutro.png')";
-   noButton.style.backgroundImage = "url('../assets/icons/palpatine-neutro.png')";
+   simButton.style.backgroundImage = "url('./assets/icons/baby-yoda-neutro.png')";
+   noButton.style.backgroundImage = "url('./assets/icons/palpatine-neutro.png')";
 });
 
 simButton.addEventListener('mouseover', function () {
    if (noButton.hidden) {
-      simButton.style.backgroundImage = "url('../assets/icons/baby-yoda-sorreiando.png')";
+      simButton.style.backgroundImage = "url('./assets/icons/baby-yoda-sorreiando.png')";
       return;
    }
-   simButton.style.backgroundImage = "url('../assets/icons/baby-yoda-sorreiando.png')";
-   noButton.style.backgroundImage = "url('../assets/icons/palpatine-puto.png')";
+   simButton.style.backgroundImage = "url('./assets/icons/baby-yoda-sorreiando.png')";
+   noButton.style.backgroundImage = "url('./assets/icons/palpatine-puto.png')";
 });
 
 simButton.addEventListener('mouseout', function () {
@@ -127,7 +127,7 @@ simButton.addEventListener('mouseout', function () {
       return;
    }
    simButton.style.backgroundImage = "url('../assets/icons/baby-yoda-neutro.png')";
-   noButton.style.backgroundImage = "url('../assets/icons/palpatine-neutro.png')";
+   noButton.style.backgroundImage = "url('./assets/icons/palpatine-neutro.png')";
 });
 
 const paginas = [
@@ -175,7 +175,7 @@ closeButton.onclick = function() {
    letterModal.close();
    hideElement(noButton);
    hideInitialMessage();
-   changeBgImageAndDisableEvents(simButton, "url('../assets/icons/baby-yoda-sorreiando.png')")
+   changeBgImageAndDisableEvents(simButton, "url('./assets/icons/baby-yoda-sorreiando.png')")
    typeWriter(yesMessage, false);
 }
 
