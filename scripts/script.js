@@ -126,7 +126,7 @@ simButton.addEventListener('mouseout', function () {
    if (noButton.hidden) {
       return;
    }
-   simButton.style.backgroundImage = "url('../assets/icons/baby-yoda-neutro.png')";
+   simButton.style.backgroundImage = "url('./assets/icons/baby-yoda-neutro.png')";
    noButton.style.backgroundImage = "url('./assets/icons/palpatine-neutro.png')";
 });
 
