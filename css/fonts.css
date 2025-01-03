@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Star Wars Jedi';
+  src: url('../assets/fonts/starjedi/Starjedi.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Star Wars Jedi SE';
+  src: url('../assets/fonts/stjedise/STJEDISE.TTF') format('truetype');
+}
+
+@font-face {
+  font-family: 'Star Wars Jedi Outline';
+  src: url('../assets/fonts/starjout/Starjout.ttf') format('truetype');
+}

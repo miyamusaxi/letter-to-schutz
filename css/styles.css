@@ -1,0 +1,257 @@
+@import url('./fonts.css');
+
+/*Configurações gerais*/
+:root {
+  --primary-txt-color: #fff;
+  --bg-color: #22223b;
+  --bg-envelope-color: #bed76c;
+  --envelope-top: #9cb54c;
+  --envelope-cover: #a7c057;
+  --letter-txt-color: #444;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --bg-letter-color: #eee3ac; 
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+body {
+  display: flex;
+  background-color: var(--bg-color);
+  color: var(--primary-txt-color);
+}
+
+#first-page {
+  opacity: 1;
+}
+
+#second-page {
+  opacity: 0;
+}
+
+#third-page {
+  opacity: 0;
+}
+
+#fourth-page {
+  opacity: 0;
+}
+
+/*Página incial*/
+.init-content {
+  width: 100%;
+  height: 100vh;
+}
+
+.botoes {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.text {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  font-weight: bold;
+}
+
+.text span::after {
+  content: "";
+  border-left: var(--primary-txt-color) solid 4px;
+  animation: cursor 1s infinite;
+}
+
+.no-dialog {
+  display: block;
+  justify-self: center;
+  justify-content: center;
+  text-align: center;
+  align-self: center;
+  background-color: var(--bg-color);
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px var(--shadow-color);
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  color: var(--primary-txt-color);
+  margin: 50px auto;
+  opacity: 0;
+}
+
+.no-dialog:hover {
+  box-shadow: 0 12px 20px var(--shadow-color);
+}
+
+.no-dialog::backdrop {
+  background-color: #141424;
+}
+
+.img {
+  min-width: 500px;
+  min-height: 500px;
+  max-height: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.yoda {
+  z-index: 1;
+  width: 192px;
+  height: 192px;
+  background-size: cover;
+  background-image: url('../assets/icons/baby-yoda-neutro.png');
+  transition: background-image 0.5s ease-in-out;
+}
+
+.yoda:hover {
+  cursor: pointer;
+}
+
+.palpatine {
+  z-index: 1;
+  width: 192px;
+  height: 192px;
+  background-size: cover;
+  background-image: url('../assets/icons/palpatine-neutro.png');
+  transition: background-image 0.5s ease-in-out;
+}
+
+.palpatine:hover {
+  cursor: pointer;
+}
+
+.letter-modal {
+  z-index: 0;
+  display: block;
+  border: none;
+  justify-self: center;
+  align-self: center;
+  width: 800px;
+  height: 700px;
+  background-color: var(--bg-letter-color);
+  border-radius: 12px;
+  opacity: 0;
+}
+
+.letter-modal::backdrop {
+  background-color: #1c1c31;
+}
+
+.letter-modal > .top {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+  height: 5%;
+  align-self: top;
+}
+
+.letter-modal > .top > .close {
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  background-image: url('../assets/icons/close-btn.png');
+}
+
+.letter-modal > .top > .close:hover {
+  cursor: pointer;
+  background-image: url('../assets/icons/close-btn-invert.png');
+}
+
+.letter-modal > #letter-content {
+  font-family: 'Star Wars Jedi';
+  padding: 5% 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: justify;
+  width: 100%;
+  height: 92%;
+}
+
+.letter-modal > #letter-content > .date {
+  text-align: end;
+}
+
+.letter-modal > .bottom {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  height: 5%;
+}
+
+.letter-modal > .bottom > .previous-button {
+  width: 128px;
+  height: 40px;
+  background-size: cover;
+  background-image: url('../assets/icons/left-arrow.png');
+}
+
+.letter-modal > .bottom > .previous-button:hover {
+  cursor: pointer;
+  background-image: url('../assets/icons/selected-left-arrow.png');
+}
+
+.letter-modal > .bottom > .previous-button[disabled=disabled] {
+  cursor: default;
+  pointer-events: none;
+  background-image: url('../assets/icons/disabled-left-arrow.png');
+}
+
+.letter-modal > .bottom > .next-button {
+  width: 128px;
+  height: 40px;
+  background-size: cover;
+  background-image: url('../assets/icons/right-arrow.png');
+}
+
+.letter-modal > .bottom > .next-button:hover {
+  cursor: pointer;
+  background-image: url('../assets/icons/selected-right-arrow.png');
+}
+
+.letter-modal > .bottom > .next-button[disabled=disabled] {
+  cursor: default;
+  pointer-events: none;
+  background-image: url('../assets/icons/disabled-right-arrow.png');
+}
+
+.letter-modal > .bottom > .paginacao {
+  font-family: 'Star Wars Jedi SE';
+  width: 600px;
+}
+
+.star-wars-font {
+  font-family: 'Star Wars Jedi SE';
+  font-size: 1.5rem;
+  padding: 2% 0;
+}
+
+.star-wars-font span::after {
+  content: "";
+  border-left: var(--primary-txt-color) solid 4px;
+  animation: cursor 1s infinite;
+}
+
+.star-wars-font-outline {
+  font-family: 'Star Wars Jedi Outline';
+  font-size: 1.5rem;
+}
+
+.star-wars-font-outline span::after {
+  content: "";
+  border-left: var(--primary-txt-color) solid 4px;
+  animation: cursor 1s infinite;
+}
+
+
+@keyframes cursor {
+  0% {
+    border-left: #3b444b solid 4px;
+  }
+}
